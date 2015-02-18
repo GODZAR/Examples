@@ -5,7 +5,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-
 import com.godzar.rpgmod.Blocks.Blocks;
 import com.godzar.rpgmod.Crafting.Recipes;
 import com.godzar.rpgmod.Items.Items;
