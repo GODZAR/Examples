@@ -5,8 +5,8 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-
 import com.godzar.rpgmod.Main;
+import com.godzar.rpgmod.Tabs.CreativeTab;
 
 public class Items
 {
@@ -14,7 +14,7 @@ public class Items
 	
     public static void init()
     {
-    	ebonyingot = new EbonyIngot().setUnlocalizedName("EbonyIngot").setCreativeTab(CreativeTabs.tabMisc);
+    	ebonyingot = new EbonyIngot().setUnlocalizedName("EbonyIngot").setCreativeTab(CreativeTab.testtab);
     }
     
     public static void register()

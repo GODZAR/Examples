@@ -1,7 +1,7 @@
 package com.godzar.rpgmod.Blocks;
 
 import com.godzar.rpgmod.Main;
-
+import com.godzar.rpgmod.Tabs.CreativeTab;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -16,7 +16,7 @@ public class Blocks
     
     public static void init()
     {
-    	titaniumore = new TitaniumOre(Material.iron).setUnlocalizedName("TitaniumOre").setCreativeTab(CreativeTabs.tabBlock);
+    	titaniumore = new TitaniumOre(Material.iron).setUnlocalizedName("TitaniumOre").setCreativeTab(CreativeTab.testtab);
     }
     
     public static void register()

@@ -5,7 +5,9 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
 import com.godzar.rpgmod.Blocks.Blocks;
+import com.godzar.rpgmod.Crafting.Recipes;
 import com.godzar.rpgmod.Items.Items;
 import com.godzar.rpgmod.Proxy.Serverproxy;
 
@@ -33,6 +35,7 @@ public class Main
 	public void Init(FMLInitializationEvent event)
 	{
 		proxy.registerRenders();
+		Recipes.init();
 	}
 	
 	@Mod.EventHandler
