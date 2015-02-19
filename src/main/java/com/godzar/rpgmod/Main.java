@@ -5,9 +5,9 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import com.godzar.rpgmod.Blocks.Blocks;
+import com.godzar.rpgmod.Blocks.ModBlocks;
 import com.godzar.rpgmod.Crafting.Recipes;
-import com.godzar.rpgmod.Items.Items;
+import com.godzar.rpgmod.Items.ModItems;
 import com.godzar.rpgmod.Proxy.Serverproxy;
 
 @Mod(modid = Main.MODID, version = Main.VERSION)
@@ -24,10 +24,10 @@ public class Main
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		Items.init();
-		Items.register();
-		Blocks.init();
-		Blocks.register();
+		ModItems.init();
+		ModItems.register();
+		ModBlocks.init();
+		ModBlocks.register();
 	}
 	
 	@Mod.EventHandler

@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.godzar.rpgmod.Main;
 import com.godzar.rpgmod.Tabs.CreativeTab;
 
-public class Items
+public class ModItems
 {
 	public static Item ebonyingot;
 	

@@ -1,6 +1,6 @@
 package com.godzar.rpgmod.Tabs;
 
-import com.godzar.rpgmod.Items.Items;
+import com.godzar.rpgmod.Items.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -15,6 +15,6 @@ public class TestTab extends CreativeTabs
 	@Override
 	public Item getTabIconItem()
 	{
-		return Items.ebonyingot;
+		return ModItems.ebonyingot;
 	}
 }
