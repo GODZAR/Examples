@@ -5,9 +5,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-
 import com.godzar.rpgmod.Blocks.ModBlocks;
 import com.godzar.rpgmod.Crafting.Recipes;
+import com.godzar.rpgmod.Handler.CraftingHandler;
+import com.godzar.rpgmod.Handler.FuelHandler;
 import com.godzar.rpgmod.Items.ModItems;
 import com.godzar.rpgmod.Proxy.Serverproxy;
 import com.godzar.rpgmod.WorldGen.OreGen;
@@ -31,6 +32,7 @@ public class Main
 		ModBlocks.init();
 		ModBlocks.register();
 		OreGen.register();
+		FuelHandler.register();
 	}
 	
 	@Mod.EventHandler
@@ -39,6 +41,7 @@ public class Main
 		proxy.registerRenders();
 		proxy.registerTileEntitySpecialRenderer();
 		Recipes.init();
+		CraftingHandler.init();
 	}
 	
 	@Mod.EventHandler

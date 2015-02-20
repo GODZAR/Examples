@@ -14,7 +14,8 @@ public class ModChest extends Block implements ITileEntityProvider
     	super(material);
 		this.setHardness(2.0F);
 		this.setResistance(5.0F);
-		setStepSound(Block.soundTypeWood);
+		this.setStepSound(Block.soundTypeWood);
+		this.maxY = 0.75F;
     }
 	
 	@Override
