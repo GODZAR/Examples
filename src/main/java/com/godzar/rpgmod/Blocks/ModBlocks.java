@@ -1,6 +1,5 @@
 package com.godzar.rpgmod.Blocks;
 
-import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -8,7 +7,6 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.godzar.rpgmod.Main;
-import com.godzar.rpgmod.Items.ModItems;
 import com.godzar.rpgmod.Tabs.CreativeTab;
 
 public class ModBlocks
