@@ -5,10 +5,12 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
 import com.godzar.rpgmod.Blocks.ModBlocks;
 import com.godzar.rpgmod.Crafting.Recipes;
 import com.godzar.rpgmod.Items.ModItems;
 import com.godzar.rpgmod.Proxy.Serverproxy;
+import com.godzar.rpgmod.WorldGen.OreGen;
 
 @Mod(modid = Main.MODID, version = Main.VERSION)
 public class Main
@@ -28,12 +30,14 @@ public class Main
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
+		OreGen.register();
 	}
 	
 	@Mod.EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
 		proxy.registerRenders();
+		proxy.registerTileEntitySpecialRenderer();
 		Recipes.init();
 	}
 	

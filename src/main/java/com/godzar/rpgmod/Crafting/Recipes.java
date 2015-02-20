@@ -12,6 +12,6 @@ public class Recipes
 	public static void init()
 	{
 	GameRegistry.addShapedRecipe(new ItemStack(Blocks.torch), new Object[] {"A", "B", 'A', Items.coal, 'B', Items.stick});
-	GameRegistry.addSmelting(ModBlocks.titaniumore, new ItemStack(ModItems.ebonyingot), 0.8F);
+	GameRegistry.addSmelting(ModBlocks.titaniumore, new ItemStack(ModItems.ebonyingot, 2), 0.8F);
 	}
 }

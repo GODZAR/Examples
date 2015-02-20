@@ -2,13 +2,19 @@ package com.godzar.rpgmod.Blocks;
 
 import com.godzar.rpgmod.Main;
 import com.godzar.rpgmod.Items.ModItems;
+import com.godzar.rpgmod.Renderer.ItemModChestRender;
+import com.godzar.rpgmod.Renderer.ModChestRender;
 import com.godzar.rpgmod.Tabs.CreativeTab;
+import com.godzar.rpgmod.TileEntity.TileEntityModChest;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks
