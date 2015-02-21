@@ -25,6 +25,12 @@ public class ModChest extends Block implements ITileEntityProvider
 	}
 	
 	@Override
+	public boolean isNormalCube()
+	{
+		return false;
+	}
+	
+	@Override
 	public boolean isOpaqueCube()
 	{
 		return false;
