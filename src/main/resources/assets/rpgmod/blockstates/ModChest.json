@@ -1,8 +1,5 @@
 {
     "variants": {
-        "facing=north": { "model": "rpgmod:ModChest" },
-        "facing=south": { "model": "rpgmod:ModChest", "y": 180 },
-        "facing=west":  { "model": "rpgmod:ModChest", "y": 270 },
-        "facing=east":  { "model": "rpgmod:ModChest", "y": 90 }
+        "normal": { "model": "rpgmod:ModChest" }
     }
 }
