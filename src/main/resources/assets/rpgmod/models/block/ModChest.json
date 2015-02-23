@@ -1,5 +1,6 @@
 {
     "textures": {
+        "particle": "blocks/planks_jungle",
         "top": "rpgmod:blocks/ModChest_top",
         "side": "rpgmod:blocks/ModChest_side",
         "bottom": "rpgmod:blocks/ModChest_bottom"

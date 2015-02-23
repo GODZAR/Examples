@@ -9,6 +9,8 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.godzar.rpgmod.Main;
+import com.godzar.rpgmod.Items.EbonyIngot;
+import com.godzar.rpgmod.Items.ModItems;
 import com.godzar.rpgmod.Tabs.CreativeTab;
 
 public class ModBlocks
@@ -35,7 +37,7 @@ public class ModBlocks
 	}
 	
 	public static void registerRender(Block block)
-	{
+	{	
 		Item item = Item.getItemFromBlock(titaniumore);
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Main.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 		Item item1 = Item.getItemFromBlock(modchest);
