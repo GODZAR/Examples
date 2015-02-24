@@ -1,7 +1,8 @@
+itemGroup.testtab=§2Test Tab
 item.EbonyIngot.name=§2Ebony Ingot
 item.TreeFuel.name=§2Tree Fuel
 item.Ebony.name=§2Ebony
 item.IronAxe.name=§2Iron Axe
 tile.TitaniumOre.name=§2Titanium Ore
-itemGroup.testtab=§2Test Tab
+tile.ModFurnaceOff.name=§2Mod Furnace
 tile.ModChest.name=§2Mod Chest

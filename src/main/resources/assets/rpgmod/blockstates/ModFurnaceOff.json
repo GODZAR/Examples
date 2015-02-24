@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "rpgmod:ModFurnaceOff" },
+        "facing=south": { "model": "rpgmod:ModFurnaceOff", "y": 180 },
+        "facing=west":  { "model": "rpgmod:ModFurnaceOff", "y": 270 },
+        "facing=east":  { "model": "rpgmod:ModFurnaceOff", "y": 90 }
+    }
+}

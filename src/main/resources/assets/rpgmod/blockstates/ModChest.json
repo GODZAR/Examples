@@ -1,5 +1,6 @@
 {
-    "variants": {
-        "normal": { "model": "rpgmod:ModChest" }
+    "variants":
+    {
+        "normal": {"model": "rpgmod:ModChest"}
     }
 }

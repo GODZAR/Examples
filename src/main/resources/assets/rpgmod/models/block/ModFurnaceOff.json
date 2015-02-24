@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "rpgmod:blocks/ModFurnaceOff_top",
+        "front": "rpgmod:blocks/ModFurnaceOff",
+        "side": "rpgmod:blocks/ModFurnaceOff_side"
+    }
+}
