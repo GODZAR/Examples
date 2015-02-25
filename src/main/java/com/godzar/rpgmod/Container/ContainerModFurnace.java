@@ -21,12 +21,12 @@ public class ContainerModFurnace extends Container
 		this.modFurnace = entity;
 		this.addSlotToContainer(new Slot(entity, 0, 56, 34));
 		this.addSlotToContainer(new Slot(entity, 1, 56, 58));
-		this.addSlotToContainer(new SlotFurnaceOutput(inventory.player, entity, 2, 116, 35));
+		this.addSlotToContainer(new SlotFurnaceOutput(inventory.player, entity, 2, 116, 34));
 		for(int i = 0; i < 3; i++)
 		{
 			for(int j = 0; j < 9; j++)
 			{
-				this.addSlotToContainer(new Slot(inventory, j + i*9 + 9, 8 + j*18, 94 + i*18));
+				this.addSlotToContainer(new Slot(inventory, j + i*9 + 9, 8 + j*18, 84 + i*18));
 			}
 		}
 		for(int i = 0; i < 9; i++)

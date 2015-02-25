@@ -109,11 +109,11 @@ public class ModFurnace extends BlockContainer
     @Override
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ)
     {
-        if (!world.isRemote)
-        {
-            FMLNetworkHandler.openGui(player, Main.instance, 0, world, x, y, z);
-        }
-		return true;
+	    if (!world.isRemote)
+	    {
+	    	player.openGui(Main.instance, 0, world, pos.getX(), pos.getY(), pos.getZ());
+	    }
+	    return true;
     }
     
     public static void setState(boolean active, World world, BlockPos pos)

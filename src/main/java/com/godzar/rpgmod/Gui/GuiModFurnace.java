@@ -26,9 +26,9 @@ public class GuiModFurnace extends GuiContainer
 	@Override
 	public void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
 	{
-		String name = this.modFurnace.hasCustomInventoryName() ? this.modFurnace.getInventoryName() : I18n.format(this.modFurnace.getInventoryName(), new Object[0]);
+		String name = "Mod Furnace";
 		this.fontRendererObj.drawString(name, this.xSize / 2 - this.fontRendererObj.getStringWidth(name) / 2, 6, 4210752);
-		this.fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), 8, this.ySize - 96 + 2, 4210752);
+		this.fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), 6, this.ySize - 92, 4210752);
 	}	
 
 	@Override
