@@ -111,7 +111,7 @@ public class ModFurnace extends BlockContainer
     {
 	    if (!world.isRemote)
 	    {
-	    	player.openGui(Main.instance, 0, world, pos.getX(), pos.getY(), pos.getZ());
+	    	FMLNetworkHandler.openGui(player, Main.instance, 0, world, pos.getX(), pos.getY(), pos.getZ());
 	    }
 	    return true;
     }
@@ -173,7 +173,7 @@ public class ModFurnace extends BlockContainer
 
             if (tileentity instanceof TileEntityModFurnace)
             {
-                ((TileEntityModFurnace)tileentity).setCustomInventoryName(stack.getDisplayName());
+                ((TileEntityModFurnace)tileentity).setGuiDisplayName(stack.getDisplayName());
             }
         }
     }

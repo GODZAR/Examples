@@ -6,6 +6,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
+import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.inventory.SlotFurnaceOutput;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -13,14 +14,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ContainerModFurnace extends Container
 {
 	private TileEntityModFurnace modFurnace;
-	private int lastfurnaceBurnTime;
+	private int lastburnTime;
 	private int lastcurrentItemBurnTime;
 	private int lastcookTime;
 	public ContainerModFurnace(InventoryPlayer inventory, TileEntityModFurnace entity)
 	{
 		this.modFurnace = entity;
 		this.addSlotToContainer(new Slot(entity, 0, 56, 34));
-		this.addSlotToContainer(new Slot(entity, 1, 56, 58));
+		this.addSlotToContainer(new SlotFurnaceFuel(entity, 1, 56, 58));
 		this.addSlotToContainer(new SlotFurnaceOutput(inventory.player, entity, 2, 116, 34));
 		for(int i = 0; i < 3; i++)
 		{
@@ -40,7 +41,7 @@ public class ContainerModFurnace extends Container
 	{
 		super.addCraftingToCrafters(icrafting);
 		icrafting.sendProgressBarUpdate(this, 0, this.modFurnace.cookTime);
-		icrafting.sendProgressBarUpdate(this, 1, this.modFurnace.furnaceBurnTime);
+		icrafting.sendProgressBarUpdate(this, 1, this.modFurnace.burnTime);
 		icrafting.sendProgressBarUpdate(this, 2, this.modFurnace.currentItemBurnTime);
 	}
 	
@@ -55,9 +56,9 @@ public class ContainerModFurnace extends Container
 			{
 				icrafting.sendProgressBarUpdate(this, 0, this.modFurnace.cookTime);
 			}
-			if(this.lastfurnaceBurnTime != this.modFurnace.furnaceBurnTime)
+			if(this.lastburnTime != this.modFurnace.burnTime)
 			{
-				icrafting.sendProgressBarUpdate(this, 0, this.modFurnace.furnaceBurnTime);
+				icrafting.sendProgressBarUpdate(this, 0, this.modFurnace.burnTime);
 			}
 			if(this.lastcurrentItemBurnTime != this.modFurnace.currentItemBurnTime)
 			{
@@ -65,7 +66,7 @@ public class ContainerModFurnace extends Container
 			}
 		}
 		this.lastcookTime = this.modFurnace.cookTime;
-		this.lastfurnaceBurnTime = this.modFurnace.furnaceBurnTime;
+		this.lastburnTime = this.modFurnace.burnTime;
 		this.lastcurrentItemBurnTime = this.modFurnace.currentItemBurnTime;
 	}
 	

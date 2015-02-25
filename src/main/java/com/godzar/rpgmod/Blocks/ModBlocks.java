@@ -40,6 +40,7 @@ public class ModBlocks
 		registerRender(titaniumore);
 		registerRender(modchest);
 		registerRender(modfurnaceoff);
+		registerRender(modfurnaceon);
 	}
 	
 	public static void registerRender(Block block)
@@ -50,5 +51,7 @@ public class ModBlocks
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item1, 0, new ModelResourceLocation(Main.MODID + ":" + item1.getUnlocalizedName().substring(5), "inventory"));
 		Item item2 = Item.getItemFromBlock(modfurnaceoff);
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item2, 0, new ModelResourceLocation(Main.MODID + ":" + item2.getUnlocalizedName().substring(5), "inventory"));
+		Item item3 = Item.getItemFromBlock(modfurnaceon);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item3, 0, new ModelResourceLocation(Main.MODID + ":" + item3.getUnlocalizedName().substring(5), "inventory"));
 	}
 }
