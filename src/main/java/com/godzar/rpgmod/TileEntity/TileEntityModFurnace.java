@@ -3,6 +3,7 @@ package com.godzar.rpgmod.TileEntity;
 import com.godzar.rpgmod.Blocks.ModFurnace;
 import com.godzar.rpgmod.Container.ContainerModFurnace;
 import com.godzar.rpgmod.Items.ModItems;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,6 +17,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.server.gui.IUpdatePlayerListBox;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityLockable;
@@ -108,6 +111,58 @@ public class TileEntityModFurnace extends TileEntityLockable implements IUpdateP
 			stack.stackSize = this.getInventoryStackLimit();
 		}
 	}
+	
+	@Override
+	public void readFromNBT(NBTTagCompound compound)
+    {
+        super.readFromNBT(compound);
+        NBTTagList nbttaglist = compound.getTagList("Items", 10);
+        this.slots = new ItemStack[this.getSizeInventory()];
+
+        for (int i = 0; i < nbttaglist.tagCount(); ++i)
+        {
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
+            byte b0 = nbttagcompound1.getByte("Slot");
+
+            if (b0 >= 0 && b0 < this.slots.length)
+            {
+                this.slots[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
+            }
+        }
+        this.burnTime = compound.getShort("BurnTime");
+        this.cookTime = compound.getShort("CookTime");
+        this.furnaceSpeed = compound.getShort("CookTimeTotal");
+        this.currentItemBurnTime = getItemBurnTime(this.slots[1]);
+        if (compound.hasKey("CustomName", 8))
+        {
+            this.localizedName = compound.getString("CustomName");
+        }
+    }
+
+	@Override
+    public void writeToNBT(NBTTagCompound compound)
+    {
+        super.writeToNBT(compound);
+        compound.setShort("BurnTime", (short)this.burnTime);
+        compound.setShort("CookTime", (short)this.cookTime);
+        compound.setShort("CookTimeTotal", (short)this.furnaceSpeed);
+        NBTTagList nbttaglist = new NBTTagList();
+        for (int i = 0; i < this.slots.length; ++i)
+        {
+            if (this.slots[i] != null)
+            {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte)i);
+                this.slots[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+        compound.setTag("Items", nbttaglist);
+        if (this.hasCustomName())
+        {
+            compound.setString("CustomName", this.localizedName);
+        }
+    }
 
 	@Override
 	public int getInventoryStackLimit()
