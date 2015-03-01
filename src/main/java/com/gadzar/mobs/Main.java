@@ -1,6 +1,8 @@
 package com.gadzar.mobs;
 
-import com.gadzar.mobs.Proxy.Serverproxy;
+import com.gadzar.mobs.entity.EntityTortoise;
+import com.gadzar.mobs.handler.EntityHandler;
+import com.gadzar.mobs.proxy.Serverproxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -14,8 +16,8 @@ public class Main
 {
     public static final String MODID = "mobs";
     public static final String VERSION = "1.0.0";
-    public static final String CLIENT_PROXY = "com.gadzar.mobs.Proxy.Clientproxy";
-	public static final String SERVER_PROXY = "com.gadzar.mobs.Proxy.Serverproxy";
+    public static final String CLIENT_PROXY = "com.gadzar.mobs.proxy.Clientproxy";
+	public static final String SERVER_PROXY = "com.gadzar.mobs.proxy.Serverproxy";
 	
 	@SidedProxy(clientSide = CLIENT_PROXY, serverSide = SERVER_PROXY)
 	public static Serverproxy proxy;
@@ -32,7 +34,8 @@ public class Main
 	@Mod.EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
-		proxy.registerRenders();
+		proxy.registerRenderThings();
+		EntityHandler.registerAnimals(EntityTortoise.class, "Tortoise");
 	}
 	
 	@Mod.EventHandler

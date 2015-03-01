@@ -1,8 +1,8 @@
-package com.gadzar.mobs.Proxy;
+package com.gadzar.mobs.proxy;
 
 public class Serverproxy
 {
-	public void registerRenders()
+	public void registerRenderThings()
 	{
 		
 	}

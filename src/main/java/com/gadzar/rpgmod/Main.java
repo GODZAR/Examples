@@ -16,7 +16,7 @@ import com.gadzar.rpgmod.Items.ModItems;
 import com.gadzar.rpgmod.Proxy.Serverproxy;
 import com.gadzar.rpgmod.WorldGen.OreGen;
 
-@Mod(modid = Main.MODID, version = Main.VERSION)
+/*@Mod(modid = Main.MODID, version = Main.VERSION)
 public class Main
 {
     public static final String MODID = "rpgmod";
@@ -56,4 +56,4 @@ public class Main
 	{
 		
 	}
-}
+}*/

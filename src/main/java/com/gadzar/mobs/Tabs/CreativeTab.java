@@ -1,4 +1,4 @@
-package com.gadzar.mobs.Tabs;
+package com.gadzar.mobs.tabs;
 
 import net.minecraft.creativetab.CreativeTabs;
 
